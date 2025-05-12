@@ -2,186 +2,180 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robo Kid – Code Through Play</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robo Kid | Learn Coding the Fun Way</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #ffffff; /* white background */
-      color: #1c1c1c;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff; /* baby blue */
+      color: #001f3f; /* navy blue */
     }
 
     header {
-      background-color: #b3dffc; /* baby blue */
-      color: #0a1f44; /* navy blue */
+      background-color: #001f3f;
+      color: white;
+      padding: 40px 20px;
       text-align: center;
-      padding: 100px 20px 80px;
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 10px;
-      animation: fadeInUp 1s ease-out;
     }
 
     header p {
       font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-      animation: fadeInUp 1.5s ease-out;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1rem;
-      margin: 15px 8px;
-      text-decoration: none;
-      transition: background 0.3s;
+    .section {
+      padding: 40px 20px;
+      text-align: center;
     }
 
-    .btn-primary {
-      background-color: #0a1f44; /* navy blue */
-      color: white;
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #001f3f;
     }
 
-    .btn-primary:hover {
-      background-color: #06213c;
-    }
-
-    .btn-secondary {
-      border: 2px solid #0a1f44;
-      color: #0a1f44;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
+    .section p {
+      font-size: 1.1rem;
+      max-width: 700px;
       margin: auto;
     }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2rem;
-      color: #0a1f44;
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
     }
 
-    .features, .how-it-works {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: #f0f8ff; /* light baby blue */
-      border-radius: 12px;
+    .feature {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
       padding: 20px;
+      max-width: 300px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 60px;
+    .feature img {
+      width: 100px;
       margin-bottom: 15px;
+    }
+
+    .how-it-works {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .how-it-works .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .how-it-works .card img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .cta {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background-color: #001f3f;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #004080;
+    }
+
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
 
     .testimonial {
       background: #e6f4fb; /* soft baby blue */
-      border-left: 4px solid #0a1f44;
+      border-left: 4px solid #001f3f;
       padding: 20px;
       margin: 10px 0;
       font-style: italic;
-    }
-
-    .cta {
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    footer {
-      background: #0a1f44; /* navy blue */
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    footer a {
-      color: #b3dffc;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Code. Play. Create.</h1>
-    <p>A screen-free coding game for curious teens in Sheikh Zayed. No lectures. Just real fun through hands-on play.</p>
-    <div>
-      <a href="#" class="btn btn-primary">Pre-Order Now</a>
-      <a href="#how" class="btn btn-secondary">Watch How It Works</a>
-    </div>
+    <h1>Robo Kid</h1>
+    <p>Where Curious Kids and Teens in Sheikh Zayed Learn to Code – the Fun Way!</p>
   </header>
 
-  <section>
-    <h2>Why Robo Kid?</h2>
+  <section class="section">
+    <h2>What Makes Robo Kid Special?</h2>
+    <p>Robo Kid is Egypt’s first screen-free coding game that turns learning into play. No long video tutorials, no screens—just hands-on fun that brings code to life!</p>
+
     <div class="features">
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3003/3003984.png" alt="robot" />
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="Robot Icon" />
         <h3>Screen-Free Coding</h3>
-        <p>No screens, no distractions. Just tactile learning through interactive blocks and real movement.</p>
+        <p>Learn real programming logic with no screens involved. Perfect for younger learners and curious teens.</p>
       </div>
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3940/3940057.png" alt="game" />
-        <h3>Game-Based Learning</h3>
-        <p>Learn by playing. Level up through missions and problem-solving—like a video game, but smarter.</p>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/3522/3522395.png" alt="Coding Bot" />
+        <h3>Interactive Play</h3>
+        <p>Kids learn best by doing. Robo Kid turns code into a physical experience that’s memorable and fun.</p>
       </div>
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3176/3176291.png" alt="location" />
-        <h3>Built for Egypt</h3>
-        <p>Made with Egyptian teens in mind—starting exclusively in Sheikh Zayed. Local, relevant, and fun.</p>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712022.png" alt="Teen Robot" />
+        <h3>For Teens Too!</h3>
+        <p>Especially designed for curious and passionate teens in Sheikh Zayed who want a real feel for coding.</p>
       </div>
     </div>
   </section>
 
-  <section id="how">
+  <section class="section">
     <h2>How It Works</h2>
     <div class="how-it-works">
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4704/4704591.png" alt="robot coding" />
         <h3>Step 1: Code It</h3>
         <p>Use coding tiles to give your robot commands.</p>
       </div>
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4736/4736901.png" alt="robot play" />
         <h3>Step 2: Play It</h3>
         <p>Press start and watch your robot bring your code to life.</p>
       </div>
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4764/4764559.png" alt="robot level up" />
         <h3>Step 3: Level Up</h3>
         <p>Beat challenges, solve puzzles, and unlock new abilities.</p>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="section">
     <h2>What Teens Are Saying</h2>
     <div class="testimonial">“Way more fun than any class!” – Adam, 13</div>
     <div class="testimonial">“I didn’t know coding could be like this.” – Lina, 14</div>
@@ -190,17 +184,14 @@
   <section class="cta">
     <h2>Ready to Join the Robo Revolution?</h2>
     <p>Be part of the first Robo Kid batch in Sheikh Zayed. Limited launch only.</p>
-    <a href="#" class="btn btn-primary">Pre-Order Now</a>
+    <a href="#contact">Contact Us</a>
   </section>
 
-  <footer>
-    <p>📍 Sheikh Zayed, Giza | 📧 hello@robokidegypt.com</p>
-    <p>
-      <a href="#" target="_blank">Instagram</a> |
-      <a href="#" target="_blank">TikTok</a> |
-      <a href="#" target="_blank">Facebook</a>
-    </p>
+  <footer id="contact">
+    <p>📩 Contact us at <strong>hello@robokid-eg.com</strong></p>
+    <p>📍 Based in Sheikh Zayed, Giza, Egypt</p>
   </footer>
 
 </body>
 </html>
+
